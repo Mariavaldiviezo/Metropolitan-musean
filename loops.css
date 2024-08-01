@@ -24,8 +24,10 @@
   font-size: medium;
   opacity: 60%;
   bottom: 92%;
-
-  text-align: center;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-align: left;
+  max-width: 90%;
 }
 
 .card > h4 {
@@ -61,4 +63,26 @@
   display: block;
   object-fit: cover;
   bottom: 10px;
+}
+
+.tooltip-text {
+  visibility: hidden; /* Initially hide the tooltip */
+  width: 120px; /* Set a width for the tooltip */
+  background-color: #333; /* Background color for the tooltip */
+  color: #fff; /* Text color for the tooltip */
+  text-align: center; /* Center the text inside the tooltip */
+  border-radius: 5px; /* Rounded corners for the tooltip */
+  padding: 5px; /* Padding inside the tooltip */
+  position: absolute; /* Position the tooltip absolutely */
+  z-index: 100; /* Ensure the tooltip appears above other elements */
+  top: 5px; /* Position the tooltip above the hoverable element */
+  left: 0px; /* Center the tooltip horizontally */
+  opacity: 0; /* Start with the tooltip being invisible */
+  transition: opacity 0.2s; /* Transition effect for the tooltip */
+  width: 100%;
+}
+
+.card:hover .tooltip-text {
+  visibility: visible; /* Show the tooltip when hovering */
+  opacity: 1; /* Make the tooltip fully visible */
 }

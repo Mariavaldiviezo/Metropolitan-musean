@@ -60,8 +60,9 @@ header {
 button {
   background-color: #ee2636;
   color: #ffffff;
-  border-radius: 8%;
-  width: 110px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  width: max-content;
   height: 40px;
   cursor: pointer;
   font-size: 18px;
